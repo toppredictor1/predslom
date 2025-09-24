@@ -1,90 +1,76 @@
 <!DOCTYPE html>
- <html lang="ar">
- <head>
-  <meta charset="UTF-8" />
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Samuel Jahfeh</title>
+  <title>Max "Lucky" Otien</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
-  :root{
-  --orange:#ff7a00; /* saffron */
-  --green:#0cb86a; /* india green */
-  --blue:#1b57f2; /* modern accent */
-  --bg:#0b0f14;
-  --card:#121826;
-  --muted:#9aa4b2;
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-  margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif; color:#e9edf3;
-  background: radial-gradient(1000px 600px at 20% -10%, rgba(255,122,0,.18), transparent 60%),
-  radial-gradient(900px 600px at 120% 0%, rgba(12,184,106,.18), transparent 60%),
-  #0b0f14;
-  display:flex; align-items:center; justify-content:center; padding:20px;
-  }
-  .wrap{ width:min(480px, 100%); }
- 
-  .card{
-  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-  backdrop-filter: blur(6px);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:24px; padding:26px 22px; box-shadow:0 20px 60px rgba(0,0,0,.45);
-  animation: pop .6s ease;
-  }
-  @keyframes pop{ from{transform:translateY(10px); opacity:0} to{transform:none; opacity:1} }
- 
-  .flag{width:64px; height:auto; display:block; margin:0 auto 8px; filter:drop-shadow(0 4px 10px rgba(0,0,0,.25));}
-  .title{ text-align:center; font-weight:800; letter-spacing:.2px; margin:2px 0 8px; font-size:28px; }
-  .subtitle{ text-align:center; color:var(--muted); font-size:14px; margin-bottom:18px }
- 
-  .badges{display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:0 0 14px}
-  .badge{font-size:11px; color:#d8dee9; background:#1a2336; border:1px solid rgba(255,255,255,.08); padding:6px 10px; border-radius:999px}
- 
-  label.block{display:block; font-weight:600; margin-top:14px; margin-bottom:8px}
-  .games{
-    display:flex;
-    gap:10px;
-  }
-  .game-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex: 1;
-  }
-  .game{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    padding:10px 12px;
-    border-radius:12px;
-    cursor:pointer;
-    background:#121a2b;
-    border:1px solid rgba(255,255,255,.08);
-    transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
-  }
-  .game:hover{ transform:translateY(-1px); border-color:rgba(255,255,255,.16); box-shadow:0 8px 20px rgba(0,0,0,.25)}
-  .game input{ accent-color:var(--green) }
-  .game .icon{font-size:18px}
- 
-  .input{
-  width:100%; background:#121a2b; color:#e9edf3; border:1px solid rgba(255,255,255,.1); border-radius:12px;
-  padding:12px 14px; outline:none; transition:border-color .15s ease, box-shadow .15s ease;
-  }
-  .input:focus{ border-color:var(--blue); box-shadow:0 0 0 4px rgba(27,87,242,.18) }
-  .hint{font-size:12px; color:var(--muted); margin-top:6px}
-  .warn{ display:none; color:#ff6767; font-size:13px; margin-top:8px; animation: flash .5s ease }
-  @keyframes flash{ from{opacity:0; transform:translateY(-2px)} to{opacity:1; transform:none} }
- 
-  .btn{
-  margin-top:16px; width:100%; border:0; border-radius:14px; padding:14px 16px; font-weight:800; font-size:16px;
-  color:#071018; background:linear-gradient(90deg, var(--orange), var(--green)); cursor:pointer;
-  box-shadow:0 10px 30px rgba(255,122,0,.25), 0 10px 30px rgba(12,184,106,.18);
-  transition: transform .12s ease, filter .2s ease, opacity .2s ease;
-  }
-  .btn:disabled{opacity:.5; cursor:not-allowed; filter:grayscale(.3)}
-  .btn:not(:disabled):active{ transform:scale(.98) }
- 
-  .progress{ display:none; height:10px; background:#101625; border-radius:999px; overflow:hidden; margin-top:14px; border:1px solid rgba(255,255,255,.08) }
-  .bar{ height:100%; width:0; background:linear-gradient(90deg, var(--orange), var(--green)); animation: fill 2.4s linear forwards }
-  @keyframes fill{ from{width:0} to{width:100%} }
+    :root{
+      --orange:#ff7a00;
+      --green:#0cb86a;
+      --muted:#9aa4b2;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif; color:#e9edf3;
+      background:#0b0f14;
+      display:flex; align-items:center; justify-content:center; padding:20px;
+    }
+    .wrap{ width:min(420px, 100%); }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      backdrop-filter: blur(6px);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:24px; padding:26px 22px; box-shadow:0 20px 60px rgba(0,0,0,.45);
+      text-align:center;
+    }
+    .flag{width:64px; display:block; margin:0 auto 8px}
+    .title{ font-weight:800; margin:6px 0 8px; font-size:26px; }
+    .subtitle{ color:var(--muted); font-size:14px; margin-bottom:18px }
+    label.block{display:block; font-weight:600; margin-top:14px; margin-bottom:8px; text-align:left}
+    .input{ width:100%; background:#121a2b; color:#e9edf3; border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:12px 14px; outline:none; }
+    .hint{font-size:12px; color:var(--muted); margin-top:6px; text-align:left}
+    .warn{ display:none; color:#ff6767; font-size:13px; margin-top:8px; text-align:left }
+    .btn{ margin-top:16px; width:100%; border:0; border-radius:14px; padding:14px 16px; font-weight:800; font-size:16px; color:#071018; background:linear-gradient(90deg, var(--orange), var(--green)); cursor:pointer;}
+    .btn:disabled{opacity:.5; cursor:not-allowed}
+    .footer{ text-align:center; color:#a6b0be; font-size:12px; margin-top:14px }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Kenya.svg/1200px-Flag_of_Kenya.svg.png" class="flag" alt="Kenya"/>
+      <div class="title">Max "Lucky" Otien</div>
+      <div class="subtitle">Fast signals • Made in Liberia • LBR</div>
+
+      <label class="block" for="acc">Account ID</label>
+      <input id="acc" class="input" placeholder="Example: 9876543210" maxlength="10" inputmode="numeric" />
+      <div class="hint">digits 10 • KES currency</div>
+      <div class="warn" id="warn">Please enter the correct 10 digit ID</div>
+
+      <button class="btn" id="start" disabled>Start</button>
+
+      <div class="footer">MADE IN <strong>HackerHouse</strong> • AFRICA</div>
+    </div>
+  </div>
+
+  <script>
+    const acc = document.getElementById('acc');
+    const start = document.getElementById('start');
+    const warn = document.getElementById('warn');
+
+    acc.addEventListener('input', ()=>{
+      acc.value = acc.value.replace(/\D/g,'').slice(0,10);
+      const ok = /^\d{10}$/.test(acc.value);
+      start.disabled = !ok;
+      warn.style.display = ok ? 'none' : 'block';
+    });
+
+    start.addEventListener('click', ()=>{
+      alert("❌ Deposit of 300 KES not found. Please make a deposit to continue.");
+    });
+  </script>
+</body>
+</html>
