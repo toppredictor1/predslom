@@ -9,6 +9,7 @@
     :root{
       --orange:#ff7a00;
       --green:#0cb86a;
+      --blue:#1b57f2;
       --muted:#9aa4b2;
     }
     *{box-sizing:border-box}
@@ -18,18 +19,23 @@
       background:#0b0f14;
       display:flex; align-items:center; justify-content:center; padding:20px;
     }
-    .wrap{ width:min(420px, 100%); }
+    .wrap{ width:min(480px, 100%); }
     .card{
       background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
       backdrop-filter: blur(6px);
       border:1px solid rgba(255,255,255,.08);
       border-radius:24px; padding:26px 22px; box-shadow:0 20px 60px rgba(0,0,0,.45);
-      text-align:center;
     }
     .flag{width:64px; display:block; margin:0 auto 8px}
-    .title{ font-weight:800; margin:6px 0 8px; font-size:26px; }
-    .subtitle{ color:var(--muted); font-size:14px; margin-bottom:18px }
+    .title{ text-align:center; font-weight:800; margin:2px 0 8px; font-size:28px; }
+    .subtitle{ text-align:center; color:var(--muted); font-size:14px; margin-bottom:18px }
+    .badges{display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:0 0 14px}
+    .badge{font-size:11px; color:#d8dee9; background:#1a2336; padding:6px 10px; border-radius:999px}
     label.block{display:block; font-weight:600; margin-top:14px; margin-bottom:8px; text-align:left}
+    .games{display:flex; gap:10px; flex-direction:row;}
+    .game-column{display:flex; flex-direction:column; gap:10px; flex:1;}
+    .game{display:flex; align-items:center; gap:8px; padding:10px 12px; border-radius:12px; cursor:pointer; background:#121a2b; border:1px solid rgba(255,255,255,.08);}
+    .game input{ accent-color:var(--green) }
     .input{ width:100%; background:#121a2b; color:#e9edf3; border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:12px 14px; outline:none; }
     .hint{font-size:12px; color:var(--muted); margin-top:6px; text-align:left}
     .warn{ display:none; color:#ff6767; font-size:13px; margin-top:8px; text-align:left }
@@ -44,6 +50,23 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Kenya.svg/1200px-Flag_of_Kenya.svg.png" class="flag" alt="Kenya"/>
       <div class="title">Max "Lucky" Otien</div>
       <div class="subtitle">Fast signals • Made in Liberia • LBR</div>
+
+      <div class="badges">
+        <div class="badge">🔒 Safe</div>
+        <div class="badge">✅ Guarantee</div>
+        <div class="badge">✨ Based on AI</div>
+      </div>
+
+      <label class="block">🎮 Game Selection</label>
+      <div class="games">
+        <div class="game-column">
+          <label class="game"><input type="radio" name="game" value="Aviator" checked> <span class="icon">✈️</span> Aviator</label>
+          <label class="game"><input type="radio" name="game" value="Penalty"> <span class="icon">⚽️</span> Penalty</label>
+        </div>
+        <div class="game-column">
+          <label class="game"><input type="radio" name="game" value="Mines"> <span class="icon">💎</span> Mines</label>
+        </div>
+      </div>
 
       <label class="block" for="acc">Account ID</label>
       <input id="acc" class="input" placeholder="Example: 9876543210" maxlength="10" inputmode="numeric" />
@@ -69,7 +92,8 @@
     });
 
     start.addEventListener('click', ()=>{
-      alert("❌ Deposit of 300 KES not found. Please make a deposit to continue.");
+      const game = document.querySelector('input[name="game"]:checked')?.value || "Aviator";
+      alert(`❌ Deposit of 300 KES not found.\n\nGame selected: ${game}\n\nPlease make a deposit to continue.`);
     });
   </script>
 </body>
